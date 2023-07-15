@@ -1,6 +1,7 @@
 // Navbar Vars
 let menubtn = document.getElementById("menuBtn");
 let menulinkes = document.getElementById("menulinkes");
+let links = document.getElementsByTagName("li");
 
 // Slider Vars
 const sliderCont = document.getElementById("sliderContId");
@@ -17,8 +18,14 @@ const prevbtns = document.getElementsByClassName("prev");
 
 // Navbar
 menubtn.onclick = ()=>{
-    if (window.innerWidth < 591) {
+    if (window.innerWidth < 646) {
         menulinkes.classList.toggle("isActive");
+    }
+}
+
+for (let i = 0; i < links.length; i++) {
+    if (window.innerWidth < 646) {
+        links[i].onclick = () => menubtn.onclick();
     }
 }
 

@@ -67,7 +67,7 @@ nav .container .icons{
 
 nav .container .icons i{
     cursor: pointer;
-    padding-right: 8px;
+    padding: 8px;
     color: var(--main-color);
 }
 
@@ -87,6 +87,7 @@ nav .container .icons i:hover{
     text-align: center;
     font-size: 13px;
     font-weight: 600;
+    transition: .3s;
 }
 
 .links li {
@@ -96,11 +97,33 @@ nav .container .icons i:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s ease;
 }
 
-.link:hover{
+.links li:not(:last-child):hover{
     background-color: whitesmoke;
     border-bottom: 3px solid var(--hover-color);
+}
+
+
+
+
+.links li:last-child {
+    display: none;
+    border-top: 1px solid #bbbbbb !important;
+    border-radius: 0;
+    margin-top: 8px;
+}
+
+.links li:last-child .icons {
+    width: 100%;
+}
+
+
+.isActive{
+    z-index: 100 !important;
+    top: 66px !important;
+    opacity: 1 !important;
 }
 
 .activeLink{
@@ -114,9 +137,59 @@ nav .container .icons i:hover{
     color: var(--main-color);
 }
 
-.isActive{
-    display: flex !important;
+
+@media (max-width: 645px) {
+
+    /* ***** Navbar **** */
+    nav .container{
+        position: relative;
+    }
+
+    .links{
+        flex-direction: column !important;
+        position: absolute;
+        box-shadow: 0px 0px 5px #2e2e2e;
+        overflow: hidden;
+        top: 85px;
+        right: 5%;
+        width: 90%;
+        height: auto !important;
+        background-color: whitesmoke;
+        padding: 5px;
+        border-radius: 4px;
+        opacity: 0 ;
+        z-index: -1 ;
+    }
+
+    .links li{
+        border-radius: 4px;
+        padding: 10px;
+        border: none !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .links li:not(:last-child):hover{
+        background-color: #f3d5bb;
+    }
+
+    .menuIcon{
+        display: block;
+    }
+
+    nav .container > .icons{
+        display: none;
+    }
+
+    .links li:last-child {
+        display: flex;
+    }
 }
+
+
+
+
+
 /* -------- End - Navbar -------------- */
 
 /* -------- Start - header -------------- */
@@ -436,6 +509,31 @@ span.prev:hover{
     justify-content: center;
 }
 
+@media (max-width: 735px) {
+    .section2 .container .card{
+        width: 135px;
+    }
+    .section2 .container .card .imgContainer span{
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 318px) {
+    .section2 .container .card{
+        width: 100px;
+    }
+    .section2 .container .card h4{
+        font-size: 12px !important;
+    }
+    .section2 .container .card h5,
+    .section2 .container .card h5 span{
+        font-size: 12px !important;
+    }
+    .section2 .container .card .imgContainer span{
+        font-size: 9px !important;
+    }
+}
+
 .section2 .container .card .imgContainer {
     width: 100%;
     box-shadow: 0px 0px 8px -1px #8b8b8b;
@@ -562,6 +660,7 @@ footer{
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 footer .mainContainer{
@@ -639,54 +738,25 @@ footer .signature{
     text-align: center;
     margin-top: 35px;
     padding: 15px;
-    color: #c1c1c1;
     border-top: 1px solid #c1c1c1;
+    color: #c1c1c1;
+    font-size: 13px;
+    word-spacing: 4px;
+}
+
+footer .signature a{
+    color: #ff9e95;
+    font-weight: 600;
+    line-height: 25px;
 }
 
 /* --------------- End - footer -------------- */
-
-
-
-
 
 
 /* ============================> Media */
 
 
 @media (max-width: 590px) {
-
-    /* ***** Navbar **** */
-    nav .container{
-        position: relative;
-    }
-
-    .links{
-        display: none;
-        flex-direction: column !important;
-        position: absolute;
-        top: 65px;
-        right: 0px;
-        width: 100%;
-        height: auto !important;
-        background-color: #f3d5bb;
-        padding: 5px;
-        border-radius: 4px;
-    }
-
-    .links li{
-        padding: 10px;
-        border: none !important;
-        width: 100%;
-        text-align: center;
-    }
-
-    .links li:hover{
-        background-color: whitesmoke;
-    }
-
-    .menuIcon{
-        display: block;
-    }
 
     h1{
         font-size: 25px !important;
@@ -814,27 +884,27 @@ footer .signature{
 
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .container{
-        width: 100%;
-        padding: 0 6px;
+        width: 100% !important;
+        padding: 0 8px;
     }
 }
 
 @media (min-width: 768px) {
     .container{
-        width: 720px;
+        width: 720px !important;
     }
 }
 
 @media (min-width: 992px) {
     .container{
-        width: 960px;
+        width: 960px !important;
     }
 }
 
 @media (min-width: 1200px) {
     .container{
-        width: 1140px;
+        width: 1140px !important;
     }
 }
