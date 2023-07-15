@@ -493,7 +493,7 @@ span.prev:hover{
 }
 
 .section2 .container{
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 40px 0px;
     flex-wrap: wrap;
 }
@@ -509,7 +509,12 @@ span.prev:hover{
     justify-content: center;
 }
 
+
 @media (max-width: 735px) {
+    .productsMenu {
+        font-size: 14px;
+    }
+
     .section2 .container .card{
         width: 135px;
     }
@@ -808,6 +813,7 @@ footer .signature a{
         width: 15px;
         height: 15px;
     }
+
     /* ******* Section 1 ****** */
     .section1 .container{
         flex-direction: column;
@@ -881,13 +887,31 @@ footer .signature a{
         padding: 25px 8px;
         width: 100%;
     }
-
 }
 
 @media (max-width: 576px) {
     .container{
         width: 100% !important;
         padding: 0 8px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    /* ******** section 1 ******** */
+    .section1 .text h1{
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+    .section1 .text h4{
+        font-size: 16px;
+    }
+    .section1 .text p{
+        font-size: 11px;
+        padding: 10px 0;
+    }
+    .section1 .text button{
+        margin-top: 8px;
     }
 }
 
