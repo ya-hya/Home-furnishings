@@ -313,36 +313,16 @@ button:hover{
     justify-content: center;
 }
 
-span.btn{
+.sliderSection .slidBtn{
+    font-size: 32px;
+    padding: 5px;
     cursor: pointer;
-    color: var(--sub-color);
-    width: 30px;
-    height: 30px;
-    transition: .3s ease;
+    color: #797979a1;
+    transition: .3 ease-in-out;
 }
 
-span.next{
-    border-top: 3px solid #5e000073;
-    border-left: 3px solid #5e000073;
-    transform-origin: center;
-    transform: rotate(-45deg);
-}
-
-span.next:hover{
-    border-top: 3px solid var(--sub-color);
-    border-left: 3px solid var(--sub-color);
-}
-
-span.prev{
-    border-top: 3px solid #5e000073;
-    border-right: 3px solid #5e000073;
-    transform-origin: center;
-    transform: rotate(45deg);
-}
-
-span.prev:hover{
-    border-top: 3px solid var(--sub-color);
-    border-right: 3px solid var(--sub-color);
+.sliderSection .slidBtn:hover{
+    color: #797979;
 }
 
 .slider-container{
@@ -382,7 +362,9 @@ span.prev:hover{
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 7px #5d5d5db5;
+    background: white;
 }
 
 .slider .card img{
@@ -395,6 +377,7 @@ span.prev:hover{
     width: 100%;
     font-size: 14px;
     font-weight: 600;
+    text-align: center;
 }
 
 /* ------ End - Slider ------- */
@@ -775,7 +758,7 @@ footer .signature a{
     .sliderSection{
         flex-direction: column;
     }
-    .sliderSection > .btn{
+    .sliderSection > i{
         display: none;
     }
     .btnSmallScren{
